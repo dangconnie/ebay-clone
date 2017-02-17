@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+// import { Button } from 'react-bootstrap';
 
 class Auction extends Component{
 	render(){
@@ -6,13 +7,25 @@ class Auction extends Component{
 		var auctionItem = this.props.item
 		return(
 			<div>
-				<h1>An auction</h1>
-				<div className="Title">
-					{auctionItem.title}
+				<div className="auction-items">
+					<div className="auctionItemTitle">
+						<h2>{auctionItem.title}</h2>
+					</div>
+
+					<div className="col-sm-3 row">
+						<div className="auctionImage">
+							<img src={auctionItem.url} />
+						</div>
+					</div>	
+
+
+					<div className="auctionItemDescr">
+						<h3>Category: {auctionItem.category}</h3>
+					</div>	
+					<div className="auctionItemDescr">
+						<h3>Description: {auctionItem.desc}</h3>
+					</div>	
 				</div>
-				<div className="auctionImage">
-					<img src={auctionItem.url} />
-				</div>				
 			</div>
 
 		);

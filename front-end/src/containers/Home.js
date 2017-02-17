@@ -21,8 +21,7 @@ class Home extends Component {
 		homeAuctions.push(<Auction key={index} item={auction} />);
 		});
 		return(
-			<div>
-				<h1>Home</h1>
+			<div className="col-sm-12">
 				{homeAuctions}
 			</div>
 
