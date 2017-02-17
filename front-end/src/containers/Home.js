@@ -13,12 +13,12 @@ class Home extends Component {
 
 	render(){
 	// this.props.getHomeData(); //class Home is a blueprint. this.props.getHomeData needs to be inside a function like now. It can't be outside.
-	console.log(this.props.homeData);
+	// console.log(this.props.homeData);
 	var homeAuctions = [];
 		this.props.homeData.map((auction, index)=>{
 		// homeAuctions.push(<li>{auction.starting_bid}</li>);
 		//will be changed to:
-		homeAuctions.push(<Auction key={index} item={auction} />);
+		return homeAuctions.push(<Auction key={index} item={auction} />);
 		});
 		return(
 			<div className="col-sm-12">

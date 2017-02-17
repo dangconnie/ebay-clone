@@ -31,12 +31,13 @@ class Register extends Component {
 
 	render(){
 		// this.props.registerResponse({message:"Test"});
+		var message = "";
 		if(this.props.registerResponse.msg === "userNameTaken"){
-			var message = "User Name is Taken";
+			message = "User Name is Taken";
 		}else if(this.props.registerResponse.msg === "userInserted"){
-			var message = "User was inserted!";
+			message = "User was inserted!";
 		}else{
-			var message = "";
+			message = "";
 		}
 		return(
 			<div className="registration">

@@ -5,8 +5,9 @@ export default function(state = [], action){
 			// console.log("I'm the register reducer, and some action called REGISTER!!!");
 			// console.log(action.payload);
 			return action.payload
+		default:
+			return state;
 	}
-	return state;
 }
 
 //action.payload is either 1) username taken or 2) username inserted

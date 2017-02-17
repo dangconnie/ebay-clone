@@ -14,7 +14,7 @@ class Auction extends Component{
 
 					<div className="col-sm-3 row">
 						<div className="auctionImage">
-							<img src={auctionItem.url} />
+							<img src={auctionItem.url} alt=""/>
 						</div>
 					</div>	
 

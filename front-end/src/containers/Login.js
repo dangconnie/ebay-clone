@@ -7,9 +7,6 @@ import { browserHistory } from 'react-router';
 class Login extends Component {
 	constructor(props) {
 		super(props);
-		// this.state={
-		// 	loginResponse: ""
-		// }
 		this.loginSubmit = this.loginSubmit.bind(this);
 	}
 
@@ -23,24 +20,40 @@ class Login extends Component {
 
 	render(){
 		console.log(this.props.loginResponse);
+		var message = "";
 		if(this.props.loginResponse === "badUsername"){
-			var message = "Username is not correct";
+			message = "Username is not correct";
 		}else if(this.props.loginResponse.msg === "badPassword"){
-			var message = "Bad pw!";
+			message = "Bad pw!";
 		}else if(this.props.loginResponse.msg === "foundUser"){
 			browserHistory.push('/'); //redirect them to home page if username and password are correct
 		}else{
-			var message = "";
+			message = "";
 		}
 
 		return(
 			<div>
 				<h1>{message}</h1>
-				<h1>Login Page</h1>
-				<form onSubmit={this.loginSubmit}>
+				<h1>Login</h1>
+				{/*<form onSubmit={this.loginSubmit}>
 					<input type="text" placeholder="Username" />
 					<input type="password" placeholder="Password" />
 					<input type="submit" value="Login!" />
+				</form>*/}
+				<form onSubmit={this.loginSubmit}>
+				  <div className="form-group">
+				  <label htmlFor="usernameInput">Username</label>
+				  <input type="text" className="form-control" placeholder="Username" />
+				  </div>			
+				  <div className="form-group">
+				    <label htmlFor="exampleInputEmail1">Email address</label>
+				    <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
+				  </div>
+				  <div className="form-group">
+				    <label htmlFor="exampleInputPassword1">Password</label>
+				    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+				  </div>
+				  <button type="submit" className="btn btn-default">Submit</button>
 				</form>
 			</div>
 		);
