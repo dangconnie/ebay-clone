@@ -35,26 +35,34 @@ class Login extends Component {
 			<div>
 				<h1>{message}</h1>
 				<h1>Login</h1>
-				{/*<form onSubmit={this.loginSubmit}>
-					<input type="text" placeholder="Username" />
-					<input type="password" placeholder="Password" />
-					<input type="submit" value="Login!" />
-				</form>*/}
-				<form onSubmit={this.loginSubmit}>
-				  <div className="form-group">
-				  <label htmlFor="usernameInput">Username</label>
-				  <input type="text" className="form-control" placeholder="Username" />
-				  </div>			
-				  <div className="form-group">
-				    <label htmlFor="exampleInputEmail1">Email address</label>
-				    <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
-				  </div>
-				  <div className="form-group">
-				    <label htmlFor="exampleInputPassword1">Password</label>
-				    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-				  </div>
-				  <button type="submit" className="btn btn-default">Submit</button>
+
+				
+
+				{/*Bootstrap form--login submit doesn't work?!?!*/}
+				<form onSubmit={this.registrationSubmit}>
+					<div className="form-group">
+						<label htmlFor="usernameInput">Username</label>
+						<input type="text" className="form-control"placeholder="Username" />
+					</div>
+					<div className="form-group">
+						<label htmlFor="emailInput">Email</label>
+						<input type="email" className="form-control" placeholder="Email" />
+					</div>
+					<div className="form-group">
+						<label htmlFor="passwordInput">Password</label>
+						<input type="password" className="form-control" placeholder="Password"/>
+					</div>
+					  <button type="submit" className="btn btn-default">Submit</button>
+
 				</form>
+
+
+			{/*
+				<form onSubmit={this.registrationSubmit}>
+					<input type="text" name="username" placeholder="Username" />
+					<input type="password" name="password" placeholder="Password" />
+					<input type="submit" value="Register!" />
+				</form>*/}
 			</div>
 		);
 	}

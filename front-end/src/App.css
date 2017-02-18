@@ -23,4 +23,8 @@
   to { transform: rotate(360deg); }
 }
 
+.home-auction{
+  border: 1px solid black;
+  padding: 20px;
+}
 

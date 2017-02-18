@@ -12,3 +12,4 @@ export default function(loginData){
 		payload: thePromise
 	}
 }
+//thePromise contains our token

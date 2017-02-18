@@ -9,6 +9,7 @@ import Home from './containers/Home';
 import Login from './containers/Login';
 import Register from './containers/Register';
 import Search from './containers/Search';
+import AuctionItem from './containers/AuctionItem';
 
 import {Provider} from 'react-redux';
 
@@ -26,6 +27,8 @@ ReactDOM.render(
 				<Route path="/login" component={Login} />
 				<Route path="/register" component={Register} />
 				<Route path="/search/:term" component={Search} />
+				<Route path="/auction/:auctionId" component={AuctionItem} />
+
 			</Route>
   		</Router>
   	</Provider>,

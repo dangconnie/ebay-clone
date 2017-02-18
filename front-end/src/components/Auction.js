@@ -1,15 +1,17 @@
 import React,{Component} from 'react';
 // import { Button } from 'react-bootstrap';
+import {Link} from 'react-router';
 
 class Auction extends Component{
 	render(){
 		console.log(this.props.item);
-		var auctionItem = this.props.item
+		var auctionItem = this.props.item;
+		var auctionLink = "/auction/" + auctionItem.id;
 		return(
 			<div>
-				<div className="auction-items">
+				<div className="home-auction">
 					<div className="auctionItemTitle">
-						<h2>{auctionItem.title}</h2>
+						<h2><Link to={auctionLink}>{auctionItem.title}</Link></h2>
 					</div>
 
 					<div className="col-sm-3 row">
