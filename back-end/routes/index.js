@@ -108,7 +108,7 @@ router.post('/login', (req, res, next)=>{
 router.post('/submitBid', (req, res, next)=>{
 	var selectQuery = "SELECT current_bid, starting_bid FROM auctions WHERE id = ?";
 	connection.query(selectQuery,[req.body.auctionItemId], (error, results, fields)=>{
-		if((req.body.bidAmount < results[0].current_bid) || (req.body.bidAmount < results.[0].starting_bid)){
+		if((req.body.bidAmount < results[0].current_bid) || (req.body.bidAmount < results[0].starting_bid)){
 			//check if amt we got back is less than the amount from the query we just ran
 			//results will be an array even if there is only one row
 			res.json({msg: "bidToLow"});
