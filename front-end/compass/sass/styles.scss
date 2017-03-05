@@ -26,9 +26,18 @@ body{
 }
 
 .auctionImage{
-	width: 30%;
+	max-width: 30%;
 }
 
 .auctionItemTitle{
 	// border: 1px solid black;
+}
+
+.loginForm{
+	margin: auto;
+	max-width: 450px;
+}
+.loginPage{
+	background: url('../images/old-wrinkled-yellow.jpg') no-repeat fixed;
+	background-size: 100%;
 }

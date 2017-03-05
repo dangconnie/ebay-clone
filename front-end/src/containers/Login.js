@@ -32,14 +32,14 @@ class Login extends Component {
 		}
 
 		return(
-			<div>
+			<div className="loginPage">
 				<h1>{message}</h1>
 				<h1>Login</h1>
 
 				
 
 				{/*Bootstrap form--login submit doesn't work?!?!*/}
-				<form onSubmit={this.registrationSubmit}>
+				<form className="loginForm" onSubmit={this.registrationSubmit}>
 					<div className="form-group">
 						<label htmlFor="usernameInput">Username</label>
 						<input type="text" className="form-control"placeholder="Username" />
