@@ -17,5 +17,5 @@
 /* line 40, ../compass/sass/styles.scss */
 .loginPage {
   background: url("../images/old-wrinkled-yellow.jpg") no-repeat fixed;
-  background-size: 100%;
+  background-size: cover;
 }

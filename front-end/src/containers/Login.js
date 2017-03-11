@@ -33,7 +33,7 @@ class Login extends Component {
 
 		return(
 			<div className="loginPage">
-				<h1>{message}</h1>
+				// <h1>{message}</h1>
 				<h1>Login</h1>
 
 				
